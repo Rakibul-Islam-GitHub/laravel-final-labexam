@@ -27,7 +27,8 @@ Route::post('/admin/create', 'adminController@employeestore');
 Route::get('/admin/employeelist', 'adminController@emplist')->name('admin.emplist');
 Route::get('/edit/{id}', 'adminController@edit');
 Route::post('/edit/{id}', 'adminController@update');
-Route::get('/delete/{id}', 'adminController@delete');
+Route::get('/delete/{id}', 'adminController@destroy');
+Route::post('/delete/{id}', 'adminController@delete');
 
 
 Route::group(['middleware'=>['type']], function(){
@@ -37,7 +38,8 @@ Route::post('/emp/create', 'empController@productstore');
 Route::get('/emp/edit/{id}', 'empController@edit');
 Route::post('/emp/edit/{id}', 'empController@update');
 Route::get('/emp/plist', 'empController@plist')->name('emp.plist');
-Route::get('/delete/{id}', 'empController@delete');
+Route::get('/emp/delete/{id}', 'empController@destroy');
+Route::post('/emp/delete/{id}', 'empController@delete');
 
 });
 

@@ -29,7 +29,7 @@ class empController extends Controller
                
 
                 if($user->save()){
-                    return redirect()->route('emp.index');
+                    return redirect()->route('emp.plist');
                 }else{
                     return back();
                 }
@@ -63,11 +63,17 @@ class empController extends Controller
     	return redirect()->route('emp.plist');
     }
 
+    public function destroy($id){
+    	
+    	
+               return view('emp.delete');
+    }
+
     public function delete($id){
     	
     	$p=Product:: find($id);
                $p->delete();
-               return redirect()->route('emp.plist');
+               return redirect('/emp/plist');
     }
 
 }

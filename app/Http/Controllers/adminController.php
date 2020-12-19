@@ -65,12 +65,16 @@ class adminController extends Controller
     	return redirect()->route('admin.emplist');
     }
 
-    public function delete($id){
+    public function destroy($id){
     	
-    	$user=User:: find($id);
-               $user->delete();
-               return redirect()->route('admin.emplist');
+    	
+        return view('admin.delete');
+}
 
-
-    }
+public function delete($id){
+ 
+ $p=User:: find($id);
+        $p->delete();
+        return redirect('/admin/employeelist');
+}
 }

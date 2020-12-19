@@ -25,7 +25,7 @@
 				</tr>
 				<tr>
 					<td>price</td>
-					<td><input type="password" name="price" value="{{$price}}"></td>
+					<td><input type="text" name="price" value="{{$price}}"></td>
 				</tr>
 				
 				
