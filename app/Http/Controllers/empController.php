@@ -67,6 +67,7 @@ class empController extends Controller
     	
     	$p=Product:: find($id);
                $p->delete();
+               return redirect()->route('emp.plist');
     }
 
 }

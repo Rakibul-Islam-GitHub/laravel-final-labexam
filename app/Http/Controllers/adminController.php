@@ -69,5 +69,8 @@ class adminController extends Controller
     	
     	$user=User:: find($id);
                $user->delete();
+               return redirect()->route('admin.emplist');
+
+
     }
 }
