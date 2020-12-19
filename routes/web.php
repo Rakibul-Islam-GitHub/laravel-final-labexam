@@ -24,4 +24,6 @@ Route::get('/logout', 'logoutController@index');
 Route::get('/admin', 'adminController@index')->name('admin.index');
 Route::get('/admin/create', 'adminController@create');    
 Route::post('/admin/create', 'adminController@employeestore');
+Route::get('/admin/employeelist', 'adminController@emplist')->name('admin.emplist');
+
 

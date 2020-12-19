@@ -35,9 +35,11 @@ class adminController extends Controller
                     return back();
                 }
 
-        	
-        
+    }
 
-
+    public function emplist(){
+    	
+        $emp = User::all();
+    	return view('admin.emplist')->with('students', $emp);
     }
 }
