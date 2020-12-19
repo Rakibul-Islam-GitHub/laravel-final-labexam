@@ -21,8 +21,19 @@ class loginController extends Controller
                     ->get();
 
         if(count($user)>0){
+
+            if($user[0]['username']=='admin'){
+                
             $req->session()->put('username', $req->username);
             return redirect('/admin');
+
+            }else{
+                $req->session()->put('username', $req->username);
+            return redirect('/emp');
+
+            }
+
+
         }else{
             $req->session()->flash('msg', 'invalid username/password');
     		return redirect('/login');
