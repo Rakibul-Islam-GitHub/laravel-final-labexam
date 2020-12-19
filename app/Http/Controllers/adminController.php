@@ -42,4 +42,26 @@ class adminController extends Controller
         $emp = User::all();
     	return view('admin.emplist')->with('students', $emp);
     }
+
+    public function edit($id){
+    	
+        $emp = User::find($id);
+    	return view('admin.edit', $emp);
+    }
+
+    public function update($id, Request $req){
+    	   
+        $user = User::find($id);
+
+        $user->username = $req->username;
+        $user->password = $req->password;
+        $user->type     = $req->type;
+        $user->name     = $req->name;
+        $user->contact     = $req->contact;
+      
+
+        $user->save();
+
+    	return redirect()->route('admin.emplist');
+    }
 }

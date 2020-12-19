@@ -25,5 +25,6 @@ Route::get('/admin', 'adminController@index')->name('admin.index');
 Route::get('/admin/create', 'adminController@create');    
 Route::post('/admin/create', 'adminController@employeestore');
 Route::get('/admin/employeelist', 'adminController@emplist')->name('admin.emplist');
-
+Route::get('/edit/{id}', 'adminController@edit');
+Route::post('/edit/{id}', 'adminController@update');
 
