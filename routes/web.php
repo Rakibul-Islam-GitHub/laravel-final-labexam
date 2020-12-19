@@ -28,3 +28,9 @@ Route::get('/admin/employeelist', 'adminController@emplist')->name('admin.emplis
 Route::get('/edit/{id}', 'adminController@edit');
 Route::post('/edit/{id}', 'adminController@update');
 
+
+
+Route::get('/emp', 'empController@index')->name('emp.index');
+Route::get('/emp/create', 'empController@create')->name('emp.create');    
+Route::post('/emp/create', 'empController@productstore');
+
