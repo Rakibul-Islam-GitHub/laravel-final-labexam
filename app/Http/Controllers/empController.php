@@ -48,4 +48,25 @@ class empController extends Controller
     	return view('emp.edit', $p);
     }
 
+    public function update($id, Request $req){
+    	   
+        $p = Product::find($id);
+
+        $p->name = $req->name;
+        $p->quantity = $req->quantity;
+        $p->price     = $req->price;
+        
+      
+
+        $p->save();
+
+    	return redirect()->route('emp.plist');
+    }
+
+    public function delete($id){
+    	
+    	$p=Product:: find($id);
+               $p->delete();
+    }
+
 }

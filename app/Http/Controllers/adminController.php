@@ -67,7 +67,7 @@ class adminController extends Controller
 
     public function delete($id){
     	
-    	$use=User:: find($id);
+    	$user=User:: find($id);
                $user->delete();
     }
 }
