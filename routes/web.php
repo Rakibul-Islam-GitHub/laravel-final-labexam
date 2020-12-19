@@ -18,3 +18,10 @@ Route::get('/', function () {
 Route::get('/login', 'loginController@index');
 Route::post('/login', 'loginController@verify');
 Route::get('/logout', 'logoutController@index');
+
+
+
+Route::get('/admin', 'adminController@index')->name('admin.index');
+Route::get('/admin/create', 'adminController@create');    
+Route::post('/admin/create', 'adminController@employeestore');
+

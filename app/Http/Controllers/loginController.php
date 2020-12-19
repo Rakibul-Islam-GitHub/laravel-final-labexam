@@ -22,7 +22,7 @@ class loginController extends Controller
 
         if(count($user)>0){
             $req->session()->put('username', $req->username);
-            return redirect('/home');
+            return redirect('/admin');
         }else{
             $req->session()->flash('msg', 'invalid username/password');
     		return redirect('/login');
