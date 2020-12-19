@@ -42,4 +42,10 @@ class empController extends Controller
     	return view('emp.plist')->with('students', $emp);
     }
 
+    public function edit($id){
+    	
+        $p = Product::find($id);
+    	return view('emp.edit', $p);
+    }
+
 }

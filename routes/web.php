@@ -34,4 +34,7 @@ Route::get('/delete/{id}', 'adminController@delete');
 Route::get('/emp', 'empController@index')->name('emp.index');
 Route::get('/emp/create', 'empController@create')->name('emp.create');    
 Route::post('/emp/create', 'empController@productstore');
+Route::get('/emp/edit/{id}', 'empController@edit');
+Route::post('/emp/edit/{id}', 'empController@update');
+Route::get('/emp/plist', 'empController@plist')->name('emp.plist');
 

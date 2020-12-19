@@ -1,13 +1,15 @@
 # laravel-final-labexam
 
-# login
+# login - /login
 
-# employee registration
+# employee registration - /admin/create
 
-# employee profile update
+# employee profile update - /edit{id}
 
-# employee delete
+# employee delete - /delete
 
-# product add
+# product add - /emp/create
+
+# product list - http://localhost:3000/emp/plist
 
 # form validation
