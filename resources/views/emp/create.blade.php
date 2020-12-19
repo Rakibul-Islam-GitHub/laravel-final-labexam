@@ -20,7 +20,7 @@
 				</tr>
 				<tr>
 					<td>quantuty</td>
-					<td><input type="password" name="quantity" value="{{old('quantuty')}}"></td>
+					<td><input type="text" name="quantity" value="{{old('quantuty')}}"></td>
 				</tr>
 				<tr>
 					<td>price</td>

@@ -22,9 +22,9 @@ class empController extends Controller
 
        
                 $user = new Product();
-                $user->username     = $req->name;
-                $user->password     = $req->quantity;
-                $user->name         = $req->price;
+                $user->name     = $req->name;
+                $user->quantity     = $req->quantity;
+                $user->price         = $req->price;
                 
                
 
