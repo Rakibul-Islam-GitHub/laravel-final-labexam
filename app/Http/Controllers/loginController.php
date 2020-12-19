@@ -25,10 +25,12 @@ class loginController extends Controller
             if($user[0]['username']=='admin'){
                 
             $req->session()->put('username', $req->username);
+            $req->session()->put('type', 'admin');
             return redirect('/admin');
 
             }else{
                 $req->session()->put('username', $req->username);
+                $req->session()->put('type', $req->username);
             return redirect('/emp');
 
             }

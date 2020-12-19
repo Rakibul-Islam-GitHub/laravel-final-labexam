@@ -8,7 +8,7 @@
 
 # employee delete - /delete
 
-# product add - /emp/create
+# product insert - /emp/create
 
 # product list - http://localhost:3000/emp/plist
 
@@ -17,3 +17,5 @@
 # product list delete - http://localhost:3000/emp/
 
 # form validation
+
+# middleware

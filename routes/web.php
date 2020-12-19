@@ -19,8 +19,8 @@ Route::get('/login', 'loginController@index');
 Route::post('/login', 'loginController@verify');
 Route::get('/logout', 'logoutController@index');
 
-
-
+Route::group(['middleware'=>['sess']], function(){
+   
 Route::get('/admin', 'adminController@index')->name('admin.index');
 Route::get('/admin/create', 'adminController@create');    
 Route::post('/admin/create', 'adminController@employeestore');
@@ -30,7 +30,7 @@ Route::post('/edit/{id}', 'adminController@update');
 Route::get('/delete/{id}', 'adminController@delete');
 
 
-
+Route::group(['middleware'=>['type']], function(){
 Route::get('/emp', 'empController@index')->name('emp.index');
 Route::get('/emp/create', 'empController@create')->name('emp.create');    
 Route::post('/emp/create', 'empController@productstore');
@@ -38,4 +38,9 @@ Route::get('/emp/edit/{id}', 'empController@edit');
 Route::post('/emp/edit/{id}', 'empController@update');
 Route::get('/emp/plist', 'empController@plist')->name('emp.plist');
 Route::get('/delete/{id}', 'empController@delete');
+
+});
+
+});
+
 
