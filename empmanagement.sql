@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2020 at 09:03 AM
+-- Generation Time: Dec 29, 2020 at 07:20 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -40,7 +40,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `quantity`, `price`) VALUES
-(1, 'P1', '20', '200');
+(1, 'P1', '20', '200'),
+(5, 'Test', '25', '550'),
+(6, 'Test', '25', '150');
 
 -- --------------------------------------------------------
 
@@ -63,7 +65,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `contact`, `type`) VALUES
 (1, 'Rakibul', 'admin', '123', '+8801943798593', 'admin'),
-(2, 'Rakibul', 'rakibul', '123', '01943798593', 'employee');
+(4, 'Rakibul', 'rakibul', '123', '01943798593', 'employee'),
+(7, 'Rakibul Islam', 'rakibul2', '123', '01943798593', 'employee'),
+(8, 'Test', 'user1', '123', '01900000000', 'employee'),
+(11, 'new', 'u001', '123', '01943798593', 'employee');
 
 --
 -- Indexes for dumped tables
@@ -89,13 +94,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

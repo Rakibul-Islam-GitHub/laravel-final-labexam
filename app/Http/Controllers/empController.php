@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\FieldRequest;
 use App\Product;
 
 class empController extends Controller
@@ -17,8 +18,8 @@ class empController extends Controller
 
     }
 
-    function productstore(Request $req){
-       // $req->validated();
+    function productstore(FieldRequest $req){
+                $req->validated();
 
        
                 $user = new Product();
@@ -39,7 +40,7 @@ class empController extends Controller
     public function plist(){
     	
         $emp = Product::all();
-    	return view('emp.plist')->with('students', $emp);
+    	return view('emp.plist')->with('p', $emp);
     }
 
     public function edit($id){

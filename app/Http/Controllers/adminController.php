@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\FieldRequest;
+use App\Http\Requests\AdduserRequest;
 use App\User;
 
 class adminController extends Controller
@@ -17,8 +19,8 @@ class adminController extends Controller
 
     }
 
-    function employeestore(Request $req){
-       // $req->validated();
+    function employeestore(AdduserRequest $req){
+                $req->validated();
 
        
                 $user = new User();
@@ -30,7 +32,7 @@ class adminController extends Controller
                
 
                 if($user->save()){
-                    return redirect()->route('admin.index');
+                    return redirect()->route('admin.emplist');
                 }else{
                     return back();
                 }
@@ -40,7 +42,7 @@ class adminController extends Controller
     public function emplist(){
     	
         $emp = User::all();
-    	return view('admin.emplist')->with('students', $emp);
+    	return view('admin.emplist')->with('emp', $emp);
     }
 
     public function edit($id){
